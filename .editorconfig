@@ -6,6 +6,9 @@ charset = utf-8
 indent_style = space
 indent_size = 4
 
+[*.{json,csproj,props,targets}]
+indent_size = 2
+
 [*.cs]
 # Prefer "var" everywhere
 csharp_style_var_for_built_in_types                   = true : suggestion
@@ -21,7 +24,7 @@ csharp_new_line_before_members_in_object_initializers = true
 csharp_new_line_before_members_in_anonymous_types     = true
 
 # Sort using and Import directives with System.* appearing first
-dotnet_sort_system_directives_first                        = false
+dotnet_sort_system_directives_first                        = true
 
 # Avoid "this." if not necessary
 dotnet_style_qualification_for_field                       = false : suggestion
@@ -31,7 +34,7 @@ dotnet_style_qualification_for_event                       = false : suggestion
 
 # Use language keywords instead of framework type names for type references
 dotnet_style_predefined_type_for_locals_parameters_members = true : suggestion
-dotnet_style_predefined_type_for_member_access             = true : suggestion
+dotnet_style_predefined_type_for_member_access             = false : suggestion
 
 # Suggest more modern language features when available
 csharp_style_pattern_matching_over_is_with_cast_check = true : none
@@ -45,3 +48,6 @@ dotnet_style_collection_initializer                        = true : suggestion
 dotnet_style_coalesce_expression                           = true : suggestion
 dotnet_style_null_propagation                              = true : suggestion
 dotnet_style_explicit_tuple_names                          = true : suggestion
+
+trim_trailing_whitespace = true
+insert_final_newline = true
